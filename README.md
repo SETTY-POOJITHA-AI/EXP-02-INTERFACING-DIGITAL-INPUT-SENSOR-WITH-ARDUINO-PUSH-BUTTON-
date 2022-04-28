@@ -43,13 +43,6 @@ PROCEDURE
 4.	 .Execute the program 
 5.	Check the simulation 
 
-
-
-
-
-
-
-
 CIRCUIT DIAGRAM 
 
 
@@ -62,20 +55,30 @@ CIRCUIT DIAGRAM
 
 FIGURE -03
 
-
-
-
-
 PROGRAM 
- 
- 
- 
- 
- 
+```
+int buttonState = 0;
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(13, INPUT);
+}
 
+void loop()
+{
+ buttonState = digitalRead(13);
+  if (buttonState == HIGH) {
+    digitalWrite(2, HIGH);
+  } else  {
+    digitalWrite(2, LOW);
+  }delay(10);
+}
+```
 
 
 Output of the simulation :
 
-[My image](username.github.com/repository/img/image.jpg)
+![output](circuit.png.jpg)
+
+RESULT :Thus the given interfacing a digital input and blink LED is sucessfully done through tinker CAD.
 
